@@ -11,7 +11,6 @@ export default async function TimePage({
   const time = times.find(
     t => t.name === decodeURIComponent(name)
   );
-
   if (!time) {
     return (
       <div className="min-h-screen flex items-center justify-center">
