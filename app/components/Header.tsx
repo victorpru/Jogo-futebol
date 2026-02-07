@@ -7,10 +7,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const linkClass = (path: string) =>
-    `px-4 py-2 rounded transition ${
-      pathname === path
-        ? 'bg-blue-600 text-white'
-        : 'text-gray-700 hover:bg-gray-200'
+    `px-4 py-2 rounded transition ${pathname === path
+      ? 'bg-blue-600 text-white'
+      : 'text-gray-700 hover:bg-gray-200'
     }`;
 
   return (
@@ -23,6 +22,9 @@ export default function Header() {
         <div className="flex gap-2">
           <Link href="/" className={linkClass('/')}>
             Home
+          </Link>
+          <Link href="/cadastrar-time" className={linkClass('/cadastrar-time')}>
+            Meu Time
           </Link>
         </div>
       </nav>
